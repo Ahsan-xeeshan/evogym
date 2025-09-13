@@ -7,7 +7,7 @@ import image5 from "../../assets/image5.png";
 import image6 from "../../assets/image6.png";
 import { motion } from "framer-motion";
 
-import { SelectedPage, type ClassType} from "../../shared/types";
+import {  type ClassType, type SelectedPage} from "../../shared/types";
 import HText from "../../shared/HText";
 import Class from "./Class";
 
@@ -52,7 +52,7 @@ type Props = {
 };
 const OurClasses = ({setSelectedPage}:Props) => {
   return <section id="ourclasses" className="w-full bg-primary-100 py-40">
-    <motion.div onViewportEnter={()=> setSelectedPage(SelectedPage.OurClasses)}>
+    <motion.div onViewportEnter={()=> setSelectedPage("ourclasses")}>
         <motion.div className="mx-auto w-5/6"
           initial="hidden"
           whileInView="visible"

@@ -1,8 +1,9 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import { SelectedPage } from "../../shared/types";
+
 import HText from "../../shared/HText";
 import ContactUsPageGraphic from '../../assets/ContactUsPageGraphic.png'
+import type { SelectedPage } from "../../shared/types";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -27,7 +28,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   return (
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+        onViewportEnter={() => setSelectedPage("contactus")}
       >
         <motion.div
           className="md:w-3/5"

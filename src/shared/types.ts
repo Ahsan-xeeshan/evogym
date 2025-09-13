@@ -1,11 +1,7 @@
 import type { ReactNode } from "react";
 
-export enum SelectedPage {
-  Home = "home",
-  Benefits = "benefits",
-  OurClasses = "ourclasses",
-  ContactUs = "contactus",
-}
+export type SelectedPage = "home" | "benefits" | "ourclasses" | "contactus";
+
 
 export interface BenefitType {
   icon: ReactNode;

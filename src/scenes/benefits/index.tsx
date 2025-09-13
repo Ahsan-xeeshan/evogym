@@ -3,7 +3,7 @@ import {
   HomeModernIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-import { SelectedPage, type BenefitType } from "../../shared/types";
+import { type BenefitType, type SelectedPage } from "../../shared/types";
 import { motion } from "framer-motion";
 import HText from "../../shared/HText";
 import Benefit from "./Benefit";
@@ -45,9 +45,7 @@ type Props = {
 const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
-      <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
-      >
+      <motion.div onViewportEnter={() => setSelectedPage("benefits")}>
         {/* HEADER */}
         <motion.div
           className="md:my-5 md:w-3/5"

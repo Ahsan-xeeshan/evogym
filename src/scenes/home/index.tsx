@@ -1,5 +1,5 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
-import { SelectedPage } from "../../shared/types";
+
 import { motion } from "framer-motion";
 import HomePageText from "../../assets/HomePageText.png";
 import ActionButton from "../../shared/ActionButton";
@@ -8,6 +8,7 @@ import HomePageGraphic from "../../assets/HomePageGraphic.png";
 import SponsorRedBull from "../../assets/SponsorRedBull.png";
 import SponsorForbes from "../../assets/SponsorForbes.png";
 import SponsorFortune from "../../assets/SponsorFortune.png";
+import type { SelectedPage } from "../../shared/types";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -19,7 +20,7 @@ const Home = ({ setSelectedPage }: Props) => {
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
-        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        onViewportEnter={() => setSelectedPage("home")}
       >
         <div className="z-10 mt-32 md:basis-3/5">
           <motion.div
@@ -60,8 +61,8 @@ const Home = ({ setSelectedPage }: Props) => {
             </ActionButton>
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}
+              onClick={() => setSelectedPage("contactus")}
+              href={`#contactus`}
             >
               <p>Learn More</p>
             </AnchorLink>
